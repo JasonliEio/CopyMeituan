@@ -1,0 +1,31 @@
+//
+//  heituan.pch
+//  山寨团
+//
+//  Created by jason on 15-1-28.
+//  Copyright (c) 2015年 jason. All rights reserved.
+//
+
+#ifndef ____heituan_pch
+#define ____heituan_pch
+
+#import "UIView+Extension.h" //view尺寸的拓展
+#import "UIButton+Extension.h" //按钮的拓展
+#import "MetaDataTool.h" //数据源工具方法
+#import "Default.h"
+#import "KVNProgress.h"
+
+#define iOS8 ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0)
+
+//颜色
+#define cColor(R,G,B,a) [UIColor colorWithRed:(R)/255.0 green:(G)/255.0 blue:(B)/255.0 alpha:a]
+
+//替换 NSLog
+#ifdef DEBUG
+#define JSLog(...) NSLog(__VA_ARGS__)
+#else
+#define JSLog(...)
+#endif
+
+
+#endif

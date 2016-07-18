@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DropDownMenu">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="4Xg-tk-RKZ" userLabel="Main">
+                    <rect key="frame" x="0.0" y="0.0" width="150" height="480"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="mEG-uM-RZa"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="FK2-cq-K5k"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="IqQ-KY-Dm5" userLabel="Sub">
+                    <rect key="frame" x="150" y="0.0" width="150" height="480"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="MCJ-j9-Zhb"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="muN-c3-u3J"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="4Xg-tk-RKZ" firstAttribute="width" secondItem="IqQ-KY-Dm5" secondAttribute="width" id="0dS-7t-v8l"/>
+                <constraint firstAttribute="bottom" secondItem="4Xg-tk-RKZ" secondAttribute="bottom" id="0jt-Ve-M9M"/>
+                <constraint firstItem="IqQ-KY-Dm5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HUe-RJ-QhS"/>
+                <constraint firstItem="IqQ-KY-Dm5" firstAttribute="leading" secondItem="4Xg-tk-RKZ" secondAttribute="trailing" id="MIg-oq-2Vi"/>
+                <constraint firstItem="4Xg-tk-RKZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NHY-B9-Xoh"/>
+                <constraint firstAttribute="trailing" secondItem="IqQ-KY-Dm5" secondAttribute="trailing" id="QzI-ta-dcE"/>
+                <constraint firstItem="4Xg-tk-RKZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UkY-JZ-F9r"/>
+                <constraint firstAttribute="bottom" secondItem="IqQ-KY-Dm5" secondAttribute="bottom" id="cBC-Ct-szC"/>
+            </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="mainTableView" destination="4Xg-tk-RKZ" id="vYW-sv-GIc"/>
+                <outlet property="subTableView" destination="IqQ-KY-Dm5" id="sBJ-Kd-BWi"/>
+            </connections>
+            <point key="canvasLocation" x="178" y="164"/>
+        </view>
+    </objects>
+</document>
